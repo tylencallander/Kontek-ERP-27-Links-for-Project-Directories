@@ -1,7 +1,7 @@
 import json
 import pandas as pd
 
-# Creating Excel file & exporting projects.json file.
+# Creating Excel file & exporting projects.json file
 
 def create_excel_from_json(json_file, output_file):
     with open(json_file, 'r') as file:
