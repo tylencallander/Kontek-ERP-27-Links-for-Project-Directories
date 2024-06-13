@@ -18,7 +18,7 @@ def create_excel_from_json(json_file, output_file):
     project_data = [{'Project Number': key, 'Project Path': f"=HYPERLINK(\"{val['projectfullpath']}\", \"{val['projectfullpath']}\")"} for key, val in data.items()]
     df = pd.DataFrame(project_data)
 
-    print("\nGenerating Excel sheet...")
+    print("\nCreating Excel sheet...")
 
 # Making the folder paths blue so people can actually tell its a hyperlink
 
@@ -32,7 +32,7 @@ def create_excel_from_json(json_file, output_file):
 
         worksheet.set_column('B:B', None, link_format)
 
-    print("\nExcel file created successfully with styled hyperlinks.")
+    print("\nExcel file successfully created!")
 
 def main():
     json_file_path = "P:/KONTEK/ENGINEERING/ELECTRICAL/Application Development/ERP/3. ConRec Folder Search/V3_2024_06_12/projects.json"
